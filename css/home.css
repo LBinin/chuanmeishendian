@@ -1,0 +1,378 @@
+body, html {
+    min-width: 926px;
+    min-height: 800px;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    height: 100%;
+    background: url(../images/home_container_background.jpg)no-repeat center center;
+    /*margin-bottom: 140px;*/
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+/* 导航栏 */
+.nav {
+    width: 826px;
+    padding: 0 50px;
+    height: 40px;
+    position: relative;
+    z-index: 999;
+}
+.nav div, .nav li a {
+    font-family: 'MSYI';
+    font-size: 22px;
+    text-decoration: none;
+    color: #141414;
+}
+.nav .active-name {
+    line-height: 40px;
+    float: left;
+}
+.nav .nav-list {
+    float: right;
+    padding: 0;
+}
+.nav .nav-list .nav-item {
+    line-height: 40px;
+    float: left;
+    list-style: none;
+    margin-left: 25px;
+}
+.nav .nav-item a {
+    position: relative;
+}
+.nav .nav-item a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: -5px;
+    	    transition: all 0.35s;
+       -moz-transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+}
+.nav .nav-item:hover a:after {
+    width: 100%;
+}
+
+/* 内容部分 */
+.home-title {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'MSYI';
+    font-weight: bold;
+    position: relative;
+}
+.home-title:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90px;
+    height: 2px;
+    background: #000;
+}
+.home-content {
+    max-width: 926px;
+    max-height: 610px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 220px;
+    bottom: 200px;
+    font-size: 0;
+}
+.section {
+    height: 100%;
+    display: inline-block;
+    width: 33.33333%;
+    position: relative;
+}
+.section .part {
+    position: absolute;
+    		box-sizing: border-box;
+       -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    opacity: 1;
+    	    transition: opacity 0.6s;
+       -moz-transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    background-size: cover;
+}
+.section .part.willAppear {
+    opacity: 0;
+}
+.section.left .part {
+    right: 0;
+}
+.section.center .part {
+    left: 0;
+    right: 0;
+}
+.section.right .part {
+    left: 0;
+}
+
+.wrap:active .part:before{
+    background-position-x: -200%;
+}
+
+.part.shoot         {top: 0;}
+.part.design        {top: 38.52459%;}
+.part.qna           {bottom: 0;}
+.part.vote          {top: 0;}
+.part.bigLOGO       {top: 32%;}
+.part.registration  {bottom: 0;}
+.part.video         {top: 0;}
+.part.news          {bottom: 0;}
+
+.part:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 300% 100%;
+    background-position-x: -100%;
+    opacity: 0;
+    	    transition: opacity 0.35s;
+       -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    cursor: pointer;
+}
+.part.shoot:before {
+    background-image: url(../images/shoot.jpg);
+}
+.part.design:before {
+    background-image: url(../images/design.jpg);
+}
+.part.qna:before {
+    background-image: url(../images/qna.jpg);
+}
+.part.vote:before {
+    background-image: url(../images/vote.jpg);
+}
+.part.registration:before {
+    background-image: url(../images/registration.jpg);
+}
+.part.video:before {
+    background-image: url(../images/video.jpg);
+}
+.part.news:before {
+    background-image: url(../images/news.jpg);
+}
+
+.wrap:hover .part:before {
+    opacity: 1;
+}
+
+/* 遮罩层 */
+.mask {
+    position: absolute;
+    bottom: 140px;
+    top: 0;
+    width: 100%;
+    	    transform: translateY(-100%);
+       -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    	    transition: all 1s;
+       -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+.mask.appear {
+    	    transform: translateY(0);
+       -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.mask .background {
+    height: 100%;
+    width: 100%;
+    background: url(../images/mask_background.jpg) no-repeat center center;
+    background-size: cover;
+}
+.mask .round {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 22%;
+    width: 400px;
+    height: 400px;
+    background: url(../images/footer_background.jpg) center center;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.mask .round-title {
+    display: inline-block;
+    margin: 20px 0;
+    color: #ac6b6b;
+    font-size: 20px;
+    line-height: 30px;
+}
+.mask .doc-link {
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fdfdfd;
+    font-size: 18px;
+    	    transition: all 0.3s;
+       -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.mask .doc-link:hover {
+    color: #8b7777;
+}
+.mask .doc-link:active {
+    color: #696969;
+}
+.mask .doc-link:before, .mask .doc-link:after {
+    content: "-";
+    padding: 0 5px;
+}
+.mask .mailBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 22%;
+    margin-top: 450px;
+    color: #fcfcfc;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.mask * {
+    font-family: 'fzqkby';
+}
+.mask .close-btn {
+    width: 50px;
+    height: 50px;
+    background: url(../images/close_mask.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+/* 显示控制 */
+.mask .round-registration {
+    opacity: 0;
+    	    transition: opacity 0.35s 0s;
+       -moz-transition: opacity 0.35s 0s;
+    -webkit-transition: opacity 0.35s 0s;
+}
+.mask .mailBox {
+    opacity: 0;
+    	    transition: opacity 0.35s 0s;
+       -moz-transition: opacity 0.35s 0s;
+    -webkit-transition: opacity 0.35s 0s;
+}
+.mask.registration .round-registration {
+    opacity: 1;
+    	    transition: opacity 0.35s 1s;
+       -moz-transition: opacity 0.35s 1s;
+    -webkit-transition: opacity 0.35s 1s;
+}
+.mask.registration .mailBox {
+    opacity: 1;
+    	    transition: opacity 0.35s 1s;
+       -moz-transition: opacity 0.35s 1s;
+    -webkit-transition: opacity 0.35s 1s;
+}
+
+.mask .round-vote {
+    height: 100%;
+    width: 50%;
+    background: url(../images/vote_QRcode.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.mask .round-vote {
+    opacity: 0;
+    	    transition: opacity 0.35s;
+       -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+}
+.mask.vote .round-vote {
+    opacity: 1;
+    	    transition: opacity 0.35s 1s;
+       -moz-transition: opacity 0.35s 1s;
+    -webkit-transition: opacity 0.35s 1s;
+}
+
+.mask .round-qna {
+    height: 100%;
+    width: 50%;
+    background: url(../images/vote_QRcode.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.mask .round-qna {
+    opacity: 0;
+    	    transition: opacity 0.35s;
+       -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+}
+.mask.qna .round-qna {
+    opacity: 1;
+    	    transition: opacity 0.35s 1s;
+       -moz-transition: opacity 0.35s 1s;
+    -webkit-transition: opacity 0.35s 1s;
+}
+
+/* 板尾 */
+.home-footer {
+    height: 140px;
+    width: 100%;
+    background: url(../images/footer_background.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+.home-footer-content {
+    width: 806px;
+    height: 100%;
+}
+.home-footer-content .copyright {
+    display: inline-block;
+    margin: 25px 0;
+    font-size: 14px;
+    color: rgba(61, 60, 59, 0.75);
+}
+.home-footer-content .copyright div{
+    font-family: 'fzxdx';
+    line-height: 30px;
+    opacity: 0.75;
+}
+.home-footer-content .logo {
+    float: right;
+    margin: 20px 0;
+    height: 98px;
+    width: 80px;
+}
+.sky31.logo {
+    background: url(../images/home_logo_sky31_wenxin.png) no-repeat 0 center;
+    background-size: 149px 98px;
+    margin-right: 90px;
+}
+.wenxin.logo {
+    background: url(../images/home_logo_sky31_wenxin.png) no-repeat -80px center;
+    background-size: 149px 98px;
+}

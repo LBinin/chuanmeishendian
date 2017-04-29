@@ -1,0 +1,30 @@
+* {
+    margin: 0 auto;
+    font-family: 'Microsoft Yahei';
+}
+@font-face {
+    src: url(../font/fzxdx.ttf);
+    font-family: 'fzxdx';
+}
+@font-face {
+    src: url(../font/MSYI.TTF);
+    font-family: 'MSYI';
+}
+@font-face {
+    src: url(../font/fzqkby.ttf);
+    font-family: 'fzqkby';
+}
+.clearFix {
+    *zoom: 1;
+}
+.clearFix:before, .clearFix:after {
+    content: "";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+::selection {
+    background: #3d3c3b;
+    color: #fff;
+}

@@ -155,7 +155,7 @@ body, html {
     right: 165px;
     bottom: 70px;
     font-size: 14px;
-    overflow: scroll;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 .scroll-area * {

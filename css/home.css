@@ -268,27 +268,31 @@ body, html {
 /* 显示控制 */
 .mask .round-registration {
     opacity: 0;
-    	    transition: opacity 0.35s 0s;
-       -moz-transition: opacity 0.35s 0s;
-    -webkit-transition: opacity 0.35s 0s;
+    visibility: hidden;
+    	    transition: opacity 0.35s 0s, visibility 0s 1.35s;
+       -moz-transition: opacity 0.35s 0s, visibility 0s 1.35s;
+    -webkit-transition: opacity 0.35s 0s, visibility 0s 1.35s;
 }
 .mask .mailBox {
     opacity: 0;
-    	    transition: opacity 0.35s 0s;
-       -moz-transition: opacity 0.35s 0s;
-    -webkit-transition: opacity 0.35s 0s;
+    visibility: hidden;
+    	    transition: opacity 0.35s 0s, visibility 0s 1.35s;
+       -moz-transition: opacity 0.35s 0s, visibility 0s 1.35s;
+    -webkit-transition: opacity 0.35s 0s, visibility 0s 1.35s;
 }
 .mask.registration .round-registration {
     opacity: 1;
-    	    transition: opacity 0.35s 1s;
-       -moz-transition: opacity 0.35s 1s;
-    -webkit-transition: opacity 0.35s 1s;
+    visibility: visible;
+    	    transition: opacity 0.35s 1s, visibility 0s 0s;
+       -moz-transition: opacity 0.35s 1s, visibility 0s 0s;
+    -webkit-transition: opacity 0.35s 1s, visibility 0s 0s;
 }
 .mask.registration .mailBox {
     opacity: 1;
-    	    transition: opacity 0.35s 1s;
-       -moz-transition: opacity 0.35s 1s;
-    -webkit-transition: opacity 0.35s 1s;
+    visibility: visible;
+    	    transition: opacity 0.35s 1s, visibility 0s 0s;
+       -moz-transition: opacity 0.35s 1s, visibility 0s 0s;
+    -webkit-transition: opacity 0.35s 1s, visibility 0s 0s;
 }
 
 .mask .round-vote {
@@ -303,15 +307,17 @@ body, html {
 }
 .mask .round-vote {
     opacity: 0;
-    	    transition: opacity 0.35s;
-       -moz-transition: opacity 0.35s;
-    -webkit-transition: opacity 0.35s;
+    visibility: hidden;
+    	    transition: opacity 0.35s 0s, visibility 0s 1.35s;
+       -moz-transition: opacity 0.35s 0s, visibility 0s 1.35s;
+    -webkit-transition: opacity 0.35s 0s, visibility 0s 1.35s;
 }
 .mask.vote .round-vote {
     opacity: 1;
-    	    transition: opacity 0.35s 1s;
-       -moz-transition: opacity 0.35s 1s;
-    -webkit-transition: opacity 0.35s 1s;
+    visibility: visible;
+    	    transition: opacity 0.35s 1s, visibility 0s 0s;
+       -moz-transition: opacity 0.35s 1s, visibility 0s 0s;
+    -webkit-transition: opacity 0.35s 1s, visibility 0s 0s;
 }
 
 .mask .round-qna {
@@ -326,15 +332,17 @@ body, html {
 }
 .mask .round-qna {
     opacity: 0;
-    	    transition: opacity 0.35s;
-       -moz-transition: opacity 0.35s;
-    -webkit-transition: opacity 0.35s;
+    visibility: hidden;
+    	    transition: opacity 0.35s 0s, visibility 0s 1.35s;
+       -moz-transition: opacity 0.35s 0s, visibility 0s 1.35s;
+    -webkit-transition: opacity 0.35s 0s, visibility 0s 1.35s;
 }
 .mask.qna .round-qna {
     opacity: 1;
-    	    transition: opacity 0.35s 1s;
-       -moz-transition: opacity 0.35s 1s;
-    -webkit-transition: opacity 0.35s 1s;
+    visibility: visible;
+    	    transition: opacity 0.35s 1s, visibility 0s 0s;
+       -moz-transition: opacity 0.35s 1s, visibility 0s 0s;
+    -webkit-transition: opacity 0.35s 1s, visibility 0s 0s;
 }
 
 /* 板尾 */
